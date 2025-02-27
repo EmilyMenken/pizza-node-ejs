@@ -15,20 +15,6 @@
     <p>Method: <%= order.method %></p>
     <p>Size: <%= order.size %></p>
 
-    <!--
-    if (Array.isArray(order.toppings)) { 
-        <p>Toppings: order.toppings.join(', ')</p>
-    } else {
-        <p>Toppings: <%= order.toppings %></p>
-    } 
-    -->
-
-    <% if (Array.isArray(order.toppings)) { %>
-        <p>Toppings: <%= order.toppings.join(', ') %></p>
-    <% } else { %>
-        <p>Toppings: <%= order.toppings %></p>
-    <% } %>
-
     <p>Toppings: <%= Array.isArray(order.toppings) ? order.toppings.join(', ') : 
         order.toppings %></p>
 
